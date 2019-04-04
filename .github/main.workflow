@@ -1,5 +1,5 @@
 workflow "Terraform" {
-  resolves = "terraform-plan"
+  resolves = "terraform-fmt"
   on       = "pull_request"
 }
 
@@ -11,7 +11,6 @@ action "filter-to-pr-open-synced" {
 action "terraform-fmt" {
   uses    = "hashicorp/terraform-github-actions/fmt@v0.2.0"
   needs   = "filter-to-pr-open-synced"
-  secrets = ["GITHUB_TOKEN"]
   env = {
     TF_ACTION_WORKING_DIR = "."
   }
