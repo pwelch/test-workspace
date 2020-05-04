@@ -1,6 +1,6 @@
 # variables.tf
 
 variable "pet_name_length" {
-  type    = "string"
+  type    = string
   default = "2"
 }
