@@ -5,5 +5,5 @@ resource "random_pet" "server" {
     uuid = "${uuid()}"
   }
 
-  length = "${var.pet_name_length}"
+  length = var.pet_name_length
 }
