@@ -2,7 +2,7 @@
 
 resource "random_pet" "server" {
   keepers = {
-    uuid = "${uuid()}"
+    uuid = uuid()
   }
 
   length = var.pet_name_length
