@@ -1,9 +1,12 @@
 # require.tf
 
 terraform {
-  required_version = "~> 0.13"
-}
+  required_version = "~> 1.0.5"
 
-provider "random" {
-  version = "~> 2.1"
+  required_providers {
+    random = {
+      source = "hashicorp/random"
+      version = "3.1.0"
+    }
+  }
 }
